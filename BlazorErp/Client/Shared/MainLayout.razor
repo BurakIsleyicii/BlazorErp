@@ -22,23 +22,10 @@
                 <MudAppBarSpacer />
                 <MudHidden Breakpoint="Breakpoint.MdAndUp" Invert="true">
                     <MudDivider Vertical="true" FlexItem="true" DividerType="DividerType.Middle" Class="mx-4 my-5" />
-                    <MudMenu EndIcon="@Icons.Filled.KeyboardArrowDown" Label="@localizer["Support"]" Color="Color.Inherit" Dense="true" Direction="Direction.Right" OffsetY="true">
-                        <MudText Typo="Typo.body2" Class="px-4 py-2"><b>@localizer["Community"]</b></MudText>
-                        <MudText Typo="Typo.body2" Class="px-4 py-2"><b>@localizer["Resources"]</b></MudText>
-                    </MudMenu>
                     <LanguageSelector />
                     <MudTooltip Text="@localizer["Toggle Dark Mode"]">
                         <MudIconButton Icon="@Icons.Material.Filled.Brightness4" Color="Color.Inherit" OnClick="@((e) => DarkMode())" />
                     </MudTooltip>
-                </MudHidden>
-                <MudHidden Breakpoint="Breakpoint.SmAndDown" Invert="true">
-                    <MudMenu Icon="@Icons.Filled.Settings" Color="Color.Inherit" Dense="true" Direction="Direction.Right" OffsetY="true">
-                        <div class="px-2">
-                            <MudIconButton Icon="@Icons.Material.Filled.Brightness4" Color="Color.Inherit" OnClick="@((e) => DarkMode())" />
-                        </div>
-                        <MudText Typo="Typo.body2" Class="px-4 py-2"><b>Community</b></MudText>
-                        <MudText Typo="Typo.body2" Class="px-4 py-2"><b>Resources</b></MudText>
-                    </MudMenu>
                 </MudHidden>
                 <MudMenu Direction="Direction.Left" OffsetX="true" Dense="true" Class="mt-1 ml-4">
                     <ActivatorContent>

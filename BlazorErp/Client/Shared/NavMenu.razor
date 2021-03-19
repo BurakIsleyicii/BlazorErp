@@ -5,19 +5,22 @@
 <UserCard />
 <MudDivider Class="mb-4" />
 <MudNavMenu>
-    <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Outlined.Home">@localizer["Home"]</MudNavLink>
+    @*<MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Outlined.Home">@localizer["Home"]</MudNavLink>*@
+    <MudListSubheader Class="mt-2 mb-n2">@localizer["Personal"]</MudListSubheader>
+    <MudNavLink Href="/" Icon="@Icons.Material.Outlined.Dashboard">
+        @localizer["Dashboard"]
+    </MudNavLink>
+    <MudNavLink Href="/account" Icon="@Icons.Material.Outlined.SupervisorAccount">
+        @localizer["Account"]
+    </MudNavLink>
+    <MudListSubheader Class="mt-2 mb-n2">
+        @localizer["Systems"]
+    </MudListSubheader>
     <MudNavLink Href="/jobs" Icon="@Icons.Material.Outlined.Work">
         @localizer["Hangfire"]
     </MudNavLink>
     <MudNavLink Href="/swagger/index.html" Target="_blank" Icon="@Icons.Material.Outlined.LiveHelp">
         @localizer["Swagger"]
-    </MudNavLink>
-    <MudListSubheader Class="mt-2 mb-n2">@localizer["Personal"]</MudListSubheader>
-    <MudNavLink Href="/dashboard" Icon="@Icons.Material.Outlined.Dashboard">
-        @localizer["Dashboard"]
-    </MudNavLink>
-    <MudNavLink Href="/account" Icon="@Icons.Material.Outlined.SupervisorAccount">
-        @localizer["Account"]
     </MudNavLink>
     @if (_authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Roles.View).Result.Succeeded || _authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Users.View).Result.Succeeded)
     {
